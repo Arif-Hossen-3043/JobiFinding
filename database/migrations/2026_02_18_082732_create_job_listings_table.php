@@ -13,11 +13,18 @@ return new class extends Migration
     {
         Schema::create('job_listings', function (Blueprint $table) {
             $table->id();
-             $table->string('name');
-             $table->string('description');
-             $table->integer('salary');
+            $table->string('name');
+
+            // Foreign key to employers table
+            $table->unsignedBigInteger('employer_id');
+            $table->foreign('employer_id')
+                  ->references('id')
+                  ->on('employers')
+                  ->onDelete('cascade');
+
+            $table->string('description');
+            $table->integer('salary');
             $table->timestamps();
-           
         });
     }
 

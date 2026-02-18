@@ -13,6 +13,7 @@ class JobListingFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            
             'salary' => fake()->numberBetween(20000, 100000),
             'description' => fake()->sentence(),
         ];
