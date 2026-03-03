@@ -18,5 +18,10 @@
                 ← Back to Jobs
             </a>
         </div>
+        <a href="/jobs/{{ $job->id }}/edit">Edit Jobs </a> 
+ 
+        {{-- akta specifi id er against a amk edit a jete hbe normlly /jobs/{id}/jobs dile hbe na  --}}
+        {{-- karon {id} ata just route er string jeta mean kore route amon hbe but data asvbe database theke  {{ id }} ai blade variabel dia jeta real value --}}
     </div>
+
 </x-layout>
